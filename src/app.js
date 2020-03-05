@@ -6,7 +6,10 @@ const app = express();
 const router = express.Router();
 
 //conecta ao banco de dados
-mongoose.connect('mongodb+srv://wesley:23111988@mondodb-cluster-hod3u.mongodb.net/nodestr')
+mongoose.connect('mongodb+srv://wesley:23111988@mondodb-cluster-hod3u.mongodb.net/nodestr', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 //carrega os models
 const Product = require('./models/product');
